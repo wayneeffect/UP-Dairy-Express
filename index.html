@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UP Dairy Express | Fresh Milk Delivery</title>
+    <style>
+        /* Base Styling */
+        :root {
+            --primary: #1a365d;
+            --secondary: #2b6cb0;
+            --accent: #ebf8ff;
+            --text: #2d3748;
+            --light: #f7fafc;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero / Pitch Section */
+        .intro-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* How It Works Section */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+
+        /* Delivery Checker Widget */
+        .checker-box {
+            background: var(--accent);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #cee8ff;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .checker-box input {
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #bde0ff;
+            border-radius: 4px;
+            width: 200px;
+            max-width: 100%;
+            margin-right: 0.5rem;
+        }
+
+        .checker-box button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .checker-box button:hover {
+            background-color: var(--primary);
+        }
+
+        #checker-result {
+            margin-top: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Contact / Signup Form */
+        .contact-section {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #718096;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>UP Dairy Express</h1>
+        <p>Fresh Farm Milk Delivered Directly to Your Porch or Business</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="intro-box">
+            <h2>Serving Newberry, Manistique, Engadine, Naubinway, and Surrounding Areas</h2>
+            <p>Rodney is already delivering to your favorite local stores. Now, you can skip the grocery store run and get fresh, cold dairy products left securely right on your porch or breakroom cooler.</p>
+        </div>
+
+        <h2 style="text-align: center; color: var(--primary); margin-top: 3rem;">How Our Subscription Works</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Build Your Bundle</h3>
+                <p>Choose your weekly staples: Whole Milk, 2%, Organic, local butter, or fresh cheese curds.</p>
+            </div>
+            <div class="card">
+                <h3>2. Set Your Cooler Out</h3>
+                <p>Leave an insulated cooler with ice packs on your porch on your town's designated delivery day.</p>
+            </div>
+            <div class="card">
+                <h3>3. Enjoy Fresh Delivery</h3>
+                <p>Rodney drops your fresh dairy straight into your cooler. Quick, clean, and completely contactless.</p>
+            </div>
+        </div>
+
+        <!-- ZIP Code Checker -->
+        <div class="checker-box">
+            <h3>Check If Rodney Services Your Area</h3>
+            <p>Enter your 5-digit UP ZIP code below to instantly check delivery availability.</p>
+            <input type="text" id="zip-input" placeholder="e.g., 49868" maxlength="5">
+            <button onclick="checkZip()">Check Availability</button>
+            <div id="checker-result"></div>
+        </div>
+
+        <!-- Simple Form Blueprint -->
+        <div class="contact-section">
+            <h2 style="margin-top: 0; color: var(--primary);">Start Your Subscription Inquiry</h2>
+            <p>Since we customize routes to maintain high density, drop your details below and Rodney will follow up with your town's specific delivery days and pricing options.</p>
+            
+            <form action="#" method="POST" onsubmit="alert('Thank you! This is a static demo form.'); return false;">
+                <div class="form-group">
+                    <label for="name">Your Name / Business Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="type">Delivery Type</label>
+                    <select id="type">
+                        <option value="residential">Residential (Home Porch Delivery)</option>
+                        <option value="commercial">Commercial (Office / Breakroom / Store)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Your Town</label>
+                    <select id="location">
+                        <option value="newberry">Newberry</option>
+                        <option value="manistique">Manistique</option>
+                        <option value="engadine">Engadine</option>
+                        <option value="naubinway">Naubinway</option>
+                        <option value="other">Other Surrounding Area</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notes">What products are you interested in? (Gallons, Creamer, Butter, etc.)</label>
+                    <textarea id="notes" rows="3"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Subscription Request</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 UP Dairy Express. Locally operated, servicing the Mid-to-Eastern Upper Peninsula.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple local ZIP verification logic for Rodney's core footprint
+        function checkZip() {
+            const zip = document.getElementById('zip-input').value.trim();
+            const resultDiv = document.getElementById('checker-result');
+            
+            // Core UP Zip Codes for Newberry, Manistique, Engadine, Naubinway
+            const validZips = ['49868', '49854', '49827', '49762'];
+            
+            if (validZips.includes(zip)) {
+                resultDiv.innerHTML = "✅ Great news! You are on Rodney's existing route path. Fill out the form below to get started.";
+                resultDiv.style.color = "#2f855a";
+            } else if (zip === "") {
+                resultDiv.innerHTML = "Please enter a valid 5-digit ZIP code.";
+                resultDiv.style.color = "#000";
+            } else {
+                resultDiv.innerHTML = "📍 You are outside our core automated route, but submit the form below anyway—if Rodney drives past your area, we might still be able to add you!";
+                resultDiv.style.color = "#c53030";
+            }
+        }
+    </script>
+</body>
+</html>
